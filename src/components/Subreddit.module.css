@@ -1,0 +1,12 @@
+.container {
+  border: 1px solid lightgray;
+  margin: 5px;
+  display: flex;
+}
+
+.container img {
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+  border-radius: 50%;
+}
