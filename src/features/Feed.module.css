@@ -1,5 +1,6 @@
 .section {
   border: 1px solid lightgray;
+  border-radius: 5px;
   color: brown;
   width: 60%;
   margin: 10px;
