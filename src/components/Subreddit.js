@@ -4,7 +4,7 @@ function Subreddit(props) {
   return (
     <div className={styles.container}>
       <img src={props.img}></img>
-      <p>{props.name}</p>
+      <p className={styles.link}>{props.name}</p>
     </div>
   );
 }

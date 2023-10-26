@@ -11,29 +11,29 @@ export const subreddits = [
   {
     name: "AskReddit",
     img: askReddit,
-    url: "https://www.reddit.com/r/AskReddit/",
+    endpoint: "AskReddit/",
   },
   {
     name: "AmItheAsshole",
     img: AITA,
-    url: "https://www.reddit.com/r/AmItheAsshole/",
+    endpoint: "AmItheAsshole/",
   },
   {
     name: "todayilearned",
     img: til,
-    url: "https://www.reddit.com/r/todayilearned/",
+    endpoint: "todayilearned/",
   },
-  { name: "memes", img: memes, url: "https://www.reddit.com/r/memes" },
+  { name: "memes", img: memes, endpoint: "memes" },
   {
     name: "ProgrammerHumor",
     img: proghum,
-    url: "https://www.reddit.com/r/ProgrammerHumor",
+    endpoint: "ProgrammerHumor",
   },
-  { name: "Salsa", img: salsa, url: "https://www.reddit.com/r/Salsa/" },
+  { name: "Salsa", img: salsa, endpoint: "Salsa/" },
   {
     name: "pyschology",
     img: psychology,
-    url: "https://www.reddit.com/r/psychology/",
+    endpoint: "psychology/",
   },
-  { name: "piano", img: piano, url: "https://www.reddit.com/r/piano/" },
+  { name: "piano", img: piano, endpoint: "piano/" },
 ];

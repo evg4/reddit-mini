@@ -6,6 +6,7 @@ import Feed from "../features/feed/Feed";
 import Footer from "../components/Footer";
 import React from "react";
 import { changeView } from "../features/feed/feedSlice";
+import reddit from "../data/redditApi";
 
 function App({ state, dispatch }) {
   const changeFeed = (e) => {
@@ -14,8 +15,11 @@ function App({ state, dispatch }) {
     } else {
       dispatch(changeView("showResults"));
     }
-
     //console.log(state.feed);
+  };
+
+  const changeResults = (e) => {
+    //code here
   };
 
   return (

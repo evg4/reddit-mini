@@ -1,6 +1,7 @@
 import styles from "./Subreddits.module.css";
 import Subreddit from "./Subreddit";
 import { subreddits } from "../data/subredditInfo";
+import reddit from "../data/redditApi";
 
 function Subreddits() {
   return (
