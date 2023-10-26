@@ -7,7 +7,14 @@ function Subreddits() {
     <section className={styles.section}>
       <h2>Subreddits</h2>
       {subreddits.map((item) => {
-        return <Subreddit name={item.name} img={item.img} url={item.url} />;
+        return (
+          <Subreddit
+            key={item.name}
+            name={item.name}
+            img={item.img}
+            url={item.url}
+          />
+        );
       })}
     </section>
   );
