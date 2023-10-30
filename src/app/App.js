@@ -30,7 +30,11 @@ function App({ state, dispatch }) {
       </header>
       <main>
         <Feed state={state} dispatch={dispatch} changeFeed={changeFeed} />
-        <Subreddits changeResults={changeResults} />
+        <Subreddits
+          state={state}
+          dispatch={dispatch}
+          changeResults={changeResults}
+        />
       </main>
       <footer>
         <Footer />

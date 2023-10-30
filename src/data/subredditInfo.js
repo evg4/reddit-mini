@@ -4,7 +4,7 @@ import til from "../assets/todayilearned.png";
 import memes from "../assets/memes.png";
 import proghum from "../assets/programmerhumor.png";
 import salsa from "../assets/salsa.png";
-import psychology from "../assets/psychology.png";
+import gaming from "../assets/gaming.png";
 import piano from "../assets/piano.png";
 
 export const subreddits = [
@@ -31,9 +31,9 @@ export const subreddits = [
   },
   { name: "Salsa", img: salsa, endpoint: "Salsa/" },
   {
-    name: "pyschology",
-    img: psychology,
-    endpoint: "psychology/",
+    name: "gaming",
+    img: gaming,
+    endpoint: "gaming/",
   },
   { name: "piano", img: piano, endpoint: "piano/" },
 ];

@@ -14,8 +14,7 @@ function Results(props) {
   } else if (props.state.results.hasError === true) {
     return <p>There was an error. Please try again.</p>;
   } else {
-    //console.log(jsonResponse);
-    const array = props.state.results.results.data.children;
+    const array = props.state.results.results.data.children.slice(2);
 
     return (
       <>

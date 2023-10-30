@@ -1,10 +1,18 @@
 import styles from "./Subreddit.module.css";
+import { fetchResultsThunk } from "../features/results/resultsSlice";
 
 function Subreddit(props) {
+  const dispatch = props.dispatch;
+  const getResults = (e) => {
+    const term = e.target.innerHTML;
+    dispatch(fetchResultsThunk(term));
+  };
   return (
     <div className={styles.container}>
       <img src={props.img}></img>
-      <p className={styles.link}>{props.name}</p>
+      <p onClick={getResults} className={styles.link} name={props.name}>
+        {props.name}
+      </p>
     </div>
   );
 }

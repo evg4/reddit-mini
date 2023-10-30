@@ -17,6 +17,7 @@ function Subreddits(props) {
             name={item.name}
             img={item.img}
             url={item.url}
+            dispatch={props.dispatch}
           />
         );
       })}
