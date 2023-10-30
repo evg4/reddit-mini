@@ -20,11 +20,21 @@ function Results(props) {
     return (
       <>
         {array.map((item) => {
+          let video;
+          if (item.data.is_video === true) {
+            video = item.data.media.reddit_video.fallback_url;
+          } else {
+            video = "";
+          }
           return (
             <PostPreview
               key={item.data.id}
               title={item.data.title}
-              subreddit={item.data.subreddit}
+              subreddit={item.data.subreddit_name_prefixed}
+              thumbnail={item.data.thumbnail}
+              url={item.data.url}
+              selftext={item.data.selftext}
+              video={video}
             />
           );
         })}

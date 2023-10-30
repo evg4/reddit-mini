@@ -3,4 +3,17 @@
   border-radius: 5px;
   margin: 5px;
   padding: 5px;
+  text-align: center;
+}
+
+.imgUrl {
+  width: 400px;
+}
+
+.imgTh {
+  width: 200px;
+}
+
+.vid {
+  width: 400px;
 }
