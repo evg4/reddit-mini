@@ -1,20 +1,20 @@
-const reddit = {
-  async fetchResults(term) {
-    const base = "https://www.reddit.com/r/";
-    const url = base + term;
-    try {
-      const data = await fetch(url);
-      if (data.ok) {
-        const jsonResponse = await data.json();
-        console.log(jsonResponse);
-        //code to execute with jsonResponse
-      }
+const fetchResults = async (term) => {
+  const base = "https://www.reddit.com/r/";
+  const url = base + term + ".json";
+  console.log(url);
+  try {
+    const data = await fetch(url);
+    if (data.ok) {
+      const jsonResponse = await data.json();
+      return jsonResponse;
+      //console.log(jsonResponse.data.children[1].data.title);
+      //code to execute with jsonResponse
+    } else {
       throw new Error("Request failed.");
-    } catch (error) {
-      console.log(error);
     }
-  },
-  async fetchPost() {},
+  } catch (error) {
+    console.log(error);
+  }
 };
 
-export default reddit;
+export { fetchResults };

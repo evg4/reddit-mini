@@ -6,7 +6,7 @@ import Feed from "../features/feed/Feed";
 import Footer from "../components/Footer";
 import React from "react";
 import { changeView } from "../features/feed/feedSlice";
-import reddit from "../data/redditApi";
+import { fetchResultsThunk } from "../features/results/resultsSlice";
 
 function App({ state, dispatch }) {
   const changeFeed = (e) => {
@@ -19,7 +19,7 @@ function App({ state, dispatch }) {
   };
 
   const changeResults = (e) => {
-    //code here
+    dispatch(fetchResultsThunk("popular"));
   };
 
   return (
@@ -30,7 +30,7 @@ function App({ state, dispatch }) {
       </header>
       <main>
         <Feed state={state} dispatch={dispatch} changeFeed={changeFeed} />
-        <Subreddits />
+        <Subreddits changeResults={changeResults} />
       </main>
       <footer>
         <Footer />

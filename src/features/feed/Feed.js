@@ -7,7 +7,7 @@ function Feed(props) {
     return (
       <section className={styles.section}>
         <button onClick={props.changeFeed}>Test button (change feed)</button>
-        <Results />
+        <Results state={props.state} dispatch={props.dispatch} />
       </section>
     );
   } else {

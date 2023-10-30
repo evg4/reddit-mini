@@ -1,12 +1,15 @@
 import styles from "./Subreddits.module.css";
 import Subreddit from "./Subreddit";
 import { subreddits } from "../data/subredditInfo";
-import reddit from "../data/redditApi";
+import { fetchResults } from "../data/redditApi";
 
-function Subreddits() {
+function Subreddits(props) {
   return (
     <section className={styles.section}>
       <h2>Subreddits</h2>
+      <button onClick={props.changeResults} /*onClick={fetchResults}*/>
+        Test button API call
+      </button>
       {subreddits.map((item) => {
         return (
           <Subreddit
