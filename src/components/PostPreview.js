@@ -12,10 +12,6 @@ function PostPreview(props) {
     const term = rawTerm.slice(3, -1);
     dispatch(changeView("showPost"));
     dispatch(changeTerm(term));
-    //dispatch(fetchPostThunk(term));
-    //need a searchTerm slice which at this point i update to "term"
-    //so i can then access that within Post
-    //and use within the thunk there
   };
 
   if (props.url.includes(".jpg") || props.url.includes(".jpeg")) {

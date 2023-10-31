@@ -26,7 +26,7 @@ function App({ state, dispatch }) {
     <div>
       <header>
         <Header />
-        <SearchBar />
+        <SearchBar state={state} dispatch={dispatch} />
       </header>
       <main>
         <Feed state={state} dispatch={dispatch} changeFeed={changeFeed} />
