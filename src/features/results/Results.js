@@ -32,8 +32,10 @@ function Results(props) {
               subreddit={item.data.subreddit_name_prefixed}
               thumbnail={item.data.thumbnail}
               url={item.data.url}
+              permalink={item.data.permalink}
               selftext={item.data.selftext}
               video={video}
+              dispatch={props.dispatch}
             />
           );
         })}

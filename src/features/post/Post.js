@@ -1,4 +1,4 @@
-function Post() {
+function Post(props) {
   return <p>I am a Post component</p>;
 }
 

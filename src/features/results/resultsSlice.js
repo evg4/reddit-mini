@@ -5,11 +5,7 @@ const fetchResultsThunk = createAsyncThunk(
   "results/fetchResults",
   async (term, thunkAPI) => {
     const response = await fetchResults(term);
-    //console.log(response);
     return response;
-    //const jsonResponse = await response.json();
-    //console.log(jsonResponse);
-    //return jsonResponse;
   }
 );
 
