@@ -13,6 +13,79 @@ function Post(props) {
     return <p>Loading...</p>;
   } else if (props.state.post.hasError) {
     return <p>There was an error. Please try again.</p>;
+  } else if (
+    props.state.post.post[0].data.children[0].data.url.includes(".jpg") ||
+    props.state.post.post[0].data.children[0].data.url.includes(".jpeg")
+  ) {
+    const post = props.state.post.post[0].data.children[0].data;
+    const commentsArr = props.state.post.post[1].data.children;
+    return (
+      <div>
+        <div className={styles.post}>
+          <h3>{post.title}</h3>
+          <p>{post.subreddit_name_prefixed}</p>
+          <p>{post.selftext}</p>
+          <img src={post.url}></img>
+        </div>
+        <ul className={styles.ul}>
+          {commentsArr.map((comment) => {
+            return (
+              <li className={styles.comment} key={comment.data.id}>
+                {comment.data.body}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
+  } else if (
+    props.state.post.post[0].data.children[0].data.thumbnail.includes(".jpg")
+  ) {
+    const post = props.state.post.post[0].data.children[0].data;
+    const commentsArr = props.state.post.post[1].data.children;
+    return (
+      <div>
+        <div className={styles.post}>
+          <h3>{post.title}</h3>
+          <p>{post.subreddit_name_prefixed}</p>
+          <p>{post.selftext}</p>
+          <img src={post.thumbnail}></img>
+        </div>
+        <ul className={styles.ul}>
+          {commentsArr.map((comment) => {
+            return (
+              <li className={styles.comment} key={comment.data.id}>
+                {comment.data.body}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
+  } else if (props.state.post.post[0].data.children[0].data.is_video) {
+    const post = props.state.post.post[0].data.children[0].data;
+    const commentsArr = props.state.post.post[1].data.children;
+    return (
+      <div>
+        <div className={styles.post}>
+          <h3>{post.title}</h3>
+          <p>{post.subreddit_name_prefixed}</p>
+          <p>{post.selftext}</p>
+          <video controls src={post.media.reddit_video.fallback_url}>
+            Video not supported.
+          </video>
+        </div>
+        <ul className={styles.ul}>
+          {commentsArr.map((comment) => {
+            return (
+              <li className={styles.comment} key={comment.data.id}>
+                {comment.data.body}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
   } else {
     const post = props.state.post.post[0].data.children[0].data;
     const commentsArr = props.state.post.post[1].data.children;

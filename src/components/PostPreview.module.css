@@ -17,3 +17,11 @@
 .vid {
   width: 400px;
 }
+
+.link {
+  text-decoration: underline;
+}
+.link:hover {
+  cursor: pointer;
+  text-decoration: none;
+}

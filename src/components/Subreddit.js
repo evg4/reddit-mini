@@ -1,10 +1,12 @@
 import styles from "./Subreddit.module.css";
 import { fetchResultsThunk } from "../features/results/resultsSlice";
+import { changeView } from "../features/feed/feedSlice";
 
 function Subreddit(props) {
   const dispatch = props.dispatch;
   const getResults = (e) => {
     const term = e.target.innerHTML;
+    dispatch(changeView("showResults"));
     dispatch(fetchResultsThunk(term));
   };
   return (

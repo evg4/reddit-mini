@@ -25,7 +25,7 @@ function PostPreview(props) {
         <p>{props.subreddit}</p>
         <img className={styles.imgUrl} src={props.url}></img>
         <p>{props.selftext}</p>
-        <p value={props.permalink} onClick={getPost}>
+        <p className={styles.link} value={props.permalink} onClick={getPost}>
           See more
         </p>
       </div>
@@ -37,7 +37,7 @@ function PostPreview(props) {
         <p>{props.subreddit}</p>
         <img className={styles.imgTh} src={props.thumbnail}></img>
         <p>{props.selftext}</p>
-        <p value={props.permalink} onClick={getPost}>
+        <p className={styles.link} value={props.permalink} onClick={getPost}>
           See more
         </p>
       </div>
@@ -51,7 +51,7 @@ function PostPreview(props) {
         <video className={styles.vid} src={props.video} controls>
           Video not supported.
         </video>
-        <p value={props.permalink} onClick={getPost}>
+        <p className={styles.link} value={props.permalink} onClick={getPost}>
           See more
         </p>
       </div>
@@ -62,7 +62,7 @@ function PostPreview(props) {
         <h3>{props.title}</h3>
         <p>{props.subreddit}</p>
         <p>{props.selftext}</p>
-        <p value={props.permalink} onClick={getPost}>
+        <p className={styles.link} value={props.permalink} onClick={getPost}>
           See more
         </p>
       </div>

@@ -7,9 +7,6 @@ function Subreddits(props) {
   return (
     <section className={styles.section}>
       <h2>Subreddits</h2>
-      <button onClick={props.changeResults} /*onClick={fetchResults}*/>
-        Test button API call
-      </button>
       {subreddits.map((item) => {
         return (
           <Subreddit
