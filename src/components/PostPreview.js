@@ -1,6 +1,8 @@
 import styles from "../components/PostPreview.module.css";
 import { fetchResultsThunk } from "../features/results/resultsSlice";
+import { fetchPostThunk } from "../features/post/postSlice";
 import { changeView } from "../features/feed/feedSlice";
+import { changeTerm } from "../features/searchTerm/searchTermSlice";
 
 function PostPreview(props) {
   const dispatch = props.dispatch;
@@ -8,9 +10,12 @@ function PostPreview(props) {
   const getPost = (e) => {
     const rawTerm = e.target.getAttribute("value");
     const term = rawTerm.slice(3, -1);
-    console.log(term);
     dispatch(changeView("showPost"));
-    dispatch(fetchResultsThunk(term));
+    dispatch(changeTerm(term));
+    //dispatch(fetchPostThunk(term));
+    //need a searchTerm slice which at this point i update to "term"
+    //so i can then access that within Post
+    //and use within the thunk there
   };
 
   if (props.url.includes(".jpg") || props.url.includes(".jpeg")) {

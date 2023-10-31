@@ -1,0 +1,19 @@
+.post {
+  border: 5px solid lightgray;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  font-size: larger;
+}
+
+.comment {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.ul {
+  list-style: none;
+  padding: 1px;
+}

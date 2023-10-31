@@ -3,12 +3,11 @@ import { fetchResultsThunk } from "./resultsSlice";
 import PostPreview from "../../components/PostPreview";
 
 function Results(props) {
-  //console.log(props.state.results);
   const dispatch = props.dispatch;
   useEffect(() => {
     dispatch(fetchResultsThunk("popular"));
   }, []);
-  //console.log(props.state.results.isLoading);
+
   if (props.state.results.isLoading === true) {
     return <p>Loading...</p>;
   } else if (props.state.results.hasError === true) {
@@ -36,6 +35,7 @@ function Results(props) {
               selftext={item.data.selftext}
               video={video}
               dispatch={props.dispatch}
+              state={props.state}
             />
           );
         })}

@@ -14,7 +14,7 @@ function Feed(props) {
     return (
       <section className={styles.section}>
         <button onClick={props.changeFeed}>Test button (change feed)</button>
-        <Post />
+        <Post state={props.state} dispatch={props.dispatch} />
       </section>
     );
   }
