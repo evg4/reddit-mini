@@ -1,7 +1,6 @@
 export const fetchResults = async (term) => {
   const base = "https://www.reddit.com/r/";
   const url = base + term + ".json";
-  //console.log(url);
   try {
     const data = await fetch(url);
     if (data.ok) {
@@ -20,7 +19,6 @@ export const fetchSearchResults = async (term) => {
   let newTerm = term.replace(" ", "%20");
   const base = "https://www.reddit.com/search.json?q=";
   const url = base + term;
-  console.log(url);
   try {
     const data = await fetch(url);
     if (data.ok) {

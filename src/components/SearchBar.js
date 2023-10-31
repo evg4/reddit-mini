@@ -1,5 +1,5 @@
 import { changeTerm } from "../features/searchTerm/searchTermSlice";
-import { fetchSearchResults } from "../data/redditApi";
+import { changeView } from "../features/feed/feedSlice";
 import { fetchSearchResultsThunk } from "../features/results/resultsSlice";
 
 function SearchBar(props) {
@@ -15,6 +15,7 @@ function SearchBar(props) {
     e.preventDefault();
     searchBox.value = "";
     const term = props.state.searchTerm;
+    dispatch(changeView("showResults"));
     dispatch(fetchSearchResultsThunk(term));
   };
 
