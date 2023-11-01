@@ -34,12 +34,12 @@ function App({ state, dispatch }) {
         <SearchBar state={state} dispatch={dispatch} />
       </header>
       <main>
-        <Feed state={state} dispatch={dispatch} changeFeed={changeFeed} />
         <Subreddits
           state={state}
           dispatch={dispatch}
           changeResults={changeResults}
         />
+        <Feed state={state} dispatch={dispatch} changeFeed={changeFeed} />
       </main>
       <footer>
         <Footer />

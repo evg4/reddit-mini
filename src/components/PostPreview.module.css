@@ -20,6 +20,9 @@
 
 .link {
   text-decoration: underline;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 .link:hover {
   cursor: pointer;

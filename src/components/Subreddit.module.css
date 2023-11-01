@@ -3,13 +3,7 @@
   border-radius: 5px;
   margin: 5px;
   display: flex;
-}
-
-.container img {
-  height: 40px;
-  width: 40px;
-  margin: 10px;
-  border-radius: 50%;
+  width: 220px;
 }
 
 .container:hover {
@@ -17,4 +11,11 @@
   color: lightgray;
   cursor: pointer;
   border: 1px solid brown;
+}
+
+.container img {
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+  border-radius: 50%;
 }

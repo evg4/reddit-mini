@@ -1,3 +1,5 @@
+import styles from "./SearchBar.module.css";
+import searchIcon from "../assets/search-icon2.png";
 import { changeTerm } from "../features/searchTerm/searchTermSlice";
 import { changeView } from "../features/feed/feedSlice";
 import { fetchSearchResultsThunk } from "../features/results/resultsSlice";
@@ -22,7 +24,9 @@ function SearchBar(props) {
   return (
     <form onSubmit={handleSubmit} onChange={handleChange}>
       <input id="value" placeholder="Enter search term"></input>
-      <button>Search</button>
+      <button>
+        <img className={styles.search} src={searchIcon}></img>
+      </button>
     </form>
   );
 }

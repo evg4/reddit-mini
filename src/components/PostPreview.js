@@ -30,7 +30,7 @@ function PostPreview(props) {
         <img className={styles.imgUrl} src={props.url}></img>
         <p>{props.selftext}</p>
         <p className={styles.link} value={props.permalink} onClick={getPost}>
-          See more
+          View post
         </p>
       </div>
     );
@@ -44,7 +44,7 @@ function PostPreview(props) {
         <img className={styles.imgTh} src={props.thumbnail}></img>
         <p>{props.selftext}</p>
         <p className={styles.link} value={props.permalink} onClick={getPost}>
-          See more
+          View post
         </p>
       </div>
     );
@@ -60,7 +60,7 @@ function PostPreview(props) {
           Video not supported.
         </video>
         <p className={styles.link} value={props.permalink} onClick={getPost}>
-          See more
+          View post
         </p>
       </div>
     );
@@ -73,7 +73,7 @@ function PostPreview(props) {
         </p>
         <p>{props.selftext}</p>
         <p className={styles.link} value={props.permalink} onClick={getPost}>
-          See more
+          View post
         </p>
       </div>
     );
