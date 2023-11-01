@@ -14,11 +14,19 @@ function PostPreview(props) {
     dispatch(changeTerm(term));
   };
 
+  const goToSubreddit = (e) => {
+    const term = e.target.innerHTML.slice(2);
+    dispatch(changeView("showResults"));
+    dispatch(fetchResultsThunk(term));
+  };
+
   if (props.url.includes(".jpg") || props.url.includes(".jpeg")) {
     return (
       <div className={styles.preview}>
         <h3>{props.title}</h3>
-        <p>{props.subreddit}</p>
+        <p className={styles.link} onClick={goToSubreddit}>
+          r/{props.subreddit}
+        </p>
         <img className={styles.imgUrl} src={props.url}></img>
         <p>{props.selftext}</p>
         <p className={styles.link} value={props.permalink} onClick={getPost}>
@@ -30,7 +38,9 @@ function PostPreview(props) {
     return (
       <div className={styles.preview}>
         <h3>{props.title}</h3>
-        <p>{props.subreddit}</p>
+        <p className={styles.link} onClick={goToSubreddit}>
+          r/{props.subreddit}
+        </p>
         <img className={styles.imgTh} src={props.thumbnail}></img>
         <p>{props.selftext}</p>
         <p className={styles.link} value={props.permalink} onClick={getPost}>
@@ -42,7 +52,9 @@ function PostPreview(props) {
     return (
       <div className={styles.preview}>
         <h3>{props.title}</h3>
-        <p>{props.subreddit}</p>
+        <p className={styles.link} onClick={goToSubreddit}>
+          r/{props.subreddit}
+        </p>
         <p>{props.selftext}</p>
         <video className={styles.vid} src={props.video} controls>
           Video not supported.
@@ -56,7 +68,9 @@ function PostPreview(props) {
     return (
       <div className={styles.preview}>
         <h3>{props.title}</h3>
-        <p>{props.subreddit}</p>
+        <p className={styles.link} onClick={goToSubreddit}>
+          r/{props.subreddit}
+        </p>
         <p>{props.selftext}</p>
         <p className={styles.link} value={props.permalink} onClick={getPost}>
           See more

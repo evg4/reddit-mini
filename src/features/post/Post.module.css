@@ -17,3 +17,12 @@
   list-style: none;
   padding: 1px;
 }
+
+.link {
+  text-decoration: underline;
+}
+
+.link:hover {
+  text-decoration: none;
+  cursor: pointer;
+}

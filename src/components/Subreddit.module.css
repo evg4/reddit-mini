@@ -12,7 +12,9 @@
   border-radius: 50%;
 }
 
-.link:hover {
-  text-decoration: underline;
+.container:hover {
+  background-color: brown;
+  color: lightgray;
   cursor: pointer;
+  border: 1px solid brown;
 }

@@ -1,6 +1,8 @@
 import styles from "../post/Post.module.css";
 import { useEffect } from "react";
 import { fetchPostThunk } from "./postSlice";
+import { fetchResultsThunk } from "../results/resultsSlice";
+import { changeView } from "../feed/feedSlice";
 
 function Post(props) {
   const dispatch = props.dispatch;
@@ -8,6 +10,13 @@ function Post(props) {
   useEffect(() => {
     dispatch(fetchPostThunk(term));
   }, []);
+
+  const goToSubreddit = (e) => {
+    const term = e.target.innerHTML.slice(2);
+    console.log(term);
+    dispatch(changeView("showResults"));
+    dispatch(fetchResultsThunk(term));
+  };
 
   if (props.state.post.isLoading) {
     return <p>Loading...</p>;
@@ -23,7 +32,9 @@ function Post(props) {
       <div>
         <div className={styles.post}>
           <h3>{post.title}</h3>
-          <p>{post.subreddit_name_prefixed}</p>
+          <p className={styles.link} onClick={goToSubreddit}>
+            {post.subreddit_name_prefixed}
+          </p>
           <p>{post.selftext}</p>
           <img src={post.url}></img>
         </div>
@@ -47,7 +58,9 @@ function Post(props) {
       <div>
         <div className={styles.post}>
           <h3>{post.title}</h3>
-          <p>{post.subreddit_name_prefixed}</p>
+          <p className={styles.link} onClick={goToSubreddit}>
+            {post.subreddit_name_prefixed}
+          </p>
           <p>{post.selftext}</p>
           <img src={post.thumbnail}></img>
         </div>
@@ -69,7 +82,9 @@ function Post(props) {
       <div>
         <div className={styles.post}>
           <h3>{post.title}</h3>
-          <p>{post.subreddit_name_prefixed}</p>
+          <p className={styles.link} onClick={goToSubreddit}>
+            {post.subreddit_name_prefixed}
+          </p>
           <p>{post.selftext}</p>
           <video controls src={post.media.reddit_video.fallback_url}>
             Video not supported.
@@ -93,7 +108,9 @@ function Post(props) {
       <div>
         <div className={styles.post}>
           <h3>{post.title}</h3>
-          <p>{post.subreddit_name_prefixed}</p>
+          <p className={styles.link} onClick={goToSubreddit}>
+            {post.subreddit_name_prefixed}
+          </p>
           <p>{post.selftext}</p>
         </div>
         <ul className={styles.ul}>

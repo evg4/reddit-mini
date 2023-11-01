@@ -1,8 +1,8 @@
 import styles from "./Header.module.css";
 
-function Header() {
+function Header(props) {
   return (
-    <h1>
+    <h1 onClick={props.onClick}>
       Reddit<span>mini</span>
     </h1>
   );

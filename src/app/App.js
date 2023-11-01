@@ -22,10 +22,15 @@ function App({ state, dispatch }) {
     dispatch(fetchResultsThunk("popular"));
   };
 
+  const goHome = (e) => {
+    dispatch(changeView("showResults"));
+    dispatch(fetchResultsThunk("popular"));
+  };
+
   return (
     <div>
       <header>
-        <Header />
+        <Header onClick={goHome} />
         <SearchBar state={state} dispatch={dispatch} />
       </header>
       <main>
