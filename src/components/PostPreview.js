@@ -22,59 +22,60 @@ function PostPreview(props) {
 
   if (props.url.includes(".jpg") || props.url.includes(".jpeg")) {
     return (
-      <div className={styles.preview}>
-        <h3>{props.title}</h3>
-        <p className={styles.link} onClick={goToSubreddit}>
+      <div value={props.permalink} onClick={getPost} className={styles.preview}>
+        <h3 value={props.permalink}>{props.title}</h3>
+        <p className={styles.subreddit} onClick={goToSubreddit}>
           r/{props.subreddit}
         </p>
         <img className={styles.imgUrl} src={props.url}></img>
         <p>{props.selftext}</p>
-        <p className={styles.link} value={props.permalink} onClick={getPost}>
-          View post
+        <p className={styles.info}>
+          Posted by {props.author} on {props.date}
         </p>
       </div>
     );
   } else if (props.thumbnail.includes(".jpg")) {
     return (
-      <div className={styles.preview}>
-        <h3>{props.title}</h3>
-        <p className={styles.link} onClick={goToSubreddit}>
+      <div value={props.permalink} onClick={getPost} className={styles.preview}>
+        <h3 value={props.permalink}>{props.title}</h3>
+        <p className={styles.subreddit} onClick={goToSubreddit}>
           r/{props.subreddit}
         </p>
         <img className={styles.imgTh} src={props.thumbnail}></img>
         <p>{props.selftext}</p>
-        <p className={styles.link} value={props.permalink} onClick={getPost}>
-          View post
+        <p className={styles.info}>
+          Posted by {props.author} on {props.date}
         </p>
       </div>
     );
   } else if (props.video) {
     return (
-      <div className={styles.preview}>
-        <h3>{props.title}</h3>
-        <p className={styles.link} onClick={goToSubreddit}>
+      <div value={props.permalink} onClick={getPost} className={styles.preview}>
+        <h3 value={props.permalink}>{props.title}</h3>
+        <p className={styles.subreddit} onClick={goToSubreddit}>
           r/{props.subreddit}
         </p>
         <p>{props.selftext}</p>
         <video className={styles.vid} src={props.video} controls>
           Video not supported.
         </video>
-        <p className={styles.link} value={props.permalink} onClick={getPost}>
-          View post
+        <p className={styles.info}>
+          Posted by {props.author} on {props.date}
         </p>
       </div>
     );
   } else {
     return (
-      <div className={styles.preview}>
-        <h3>{props.title}</h3>
-        <p className={styles.link} onClick={goToSubreddit}>
-          r/{props.subreddit}
-        </p>
-        <p>{props.selftext}</p>
-        <p className={styles.link} value={props.permalink} onClick={getPost}>
-          View post
-        </p>
+      <div value={props.permalink} onClick={getPost} className={styles.preview}>
+        <h3 value={props.permalink}>{props.title}</h3>
+        <div value={props.permalink} className={styles.flex}>
+          <p className={styles.subreddit} onClick={goToSubreddit}>
+            r/{props.subreddit}
+          </p>
+          <p value={props.permalink} className={styles.info}>
+            Posted by {props.author} on {props.date}
+          </p>{" "}
+        </div>
       </div>
     );
   }

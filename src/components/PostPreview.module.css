@@ -1,9 +1,16 @@
 .preview {
   border: 1px solid lightgray;
   border-radius: 5px;
-  margin: 5px;
+  margin: 5px auto;
   padding: 5px;
   text-align: center;
+  max-width: 700px;
+}
+
+.preview:hover {
+  background-color: lightgray;
+
+  cursor: pointer;
 }
 
 .imgUrl {
@@ -18,6 +25,16 @@
   width: 400px;
 }
 
+.subreddit {
+  text-decoration: underline;
+  text-align: left;
+}
+
+.subreddit:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .link {
   text-decoration: underline;
   width: max-content;
@@ -27,4 +44,14 @@
 .link:hover {
   cursor: pointer;
   text-decoration: none;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
 }
