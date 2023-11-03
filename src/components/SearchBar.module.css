@@ -36,3 +36,16 @@ form {
 .search {
   height: 30px;
 }
+
+.x {
+  padding: 0 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: gray;
+  height: max-content;
+}
+
+.x:hover {
+  cursor: pointer;
+  color: black;
+}
