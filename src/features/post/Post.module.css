@@ -27,9 +27,16 @@
   margin: 5px auto;
 }
 
-.author {
+.info {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.commentsInfo {
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
 
 .icon {

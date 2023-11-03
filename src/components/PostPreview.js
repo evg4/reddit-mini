@@ -52,11 +52,6 @@ function PostPreview(props) {
           <img
             value={props.permalink}
             className={styles.icon}
-            src={downsImg}
-          ></img>
-          <img
-            value={props.permalink}
-            className={styles.icon}
             src={comments}
           ></img>
           <p value={props.permalink}>{props.comments}</p>
@@ -100,11 +95,6 @@ function PostPreview(props) {
             src={upsImg}
           ></img>
           <p value={props.permalink}>{props.score}</p>
-          <img
-            value={props.permalink}
-            className={styles.icon}
-            src={downsImg}
-          ></img>
           <img
             value={props.permalink}
             className={styles.icon}
@@ -157,11 +147,6 @@ function PostPreview(props) {
           <img
             value={props.permalink}
             className={styles.icon}
-            src={downsImg}
-          ></img>
-          <img
-            value={props.permalink}
-            className={styles.icon}
             src={comments}
           ></img>
           <p value={props.permalink}>{props.comments}</p>
@@ -200,11 +185,6 @@ function PostPreview(props) {
             src={upsImg}
           ></img>
           <p value={props.permalink}>{props.score}</p>
-          <img
-            value={props.permalink}
-            className={styles.icon}
-            src={downsImg}
-          ></img>
           <img
             value={props.permalink}
             className={styles.icon}

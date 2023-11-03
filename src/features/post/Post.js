@@ -6,6 +6,8 @@ import { changeView } from "../feed/feedSlice";
 import ReactMarkdown from "react-markdown";
 import pen from "../../assets/pen.png";
 import calendar from "../../assets/calendar.png";
+import thumbsUp from "../../assets/ups.png";
+import comments from "../../assets/comments.png";
 
 function Post(props) {
   const dispatch = props.dispatch;
@@ -50,7 +52,11 @@ function Post(props) {
           </p>
           <ReactMarkdown className={styles.postText} children={post.selftext} />
           <img className={styles.postImg} src={post.url}></img>
-          <div className={styles.author}>
+          <div className={styles.info}>
+            <img className={styles.icon} src={thumbsUp}></img>
+            <p>{post.score}</p>
+            <img className={styles.icon} src={comments}></img>
+            <p>{post.num_comments}</p>
             <img className={styles.icon} src={pen}></img>
             <p>{post.author} </p>
             <img className={styles.icon} src={calendar}></img>
@@ -65,7 +71,7 @@ function Post(props) {
                   className={styles.commentText}
                   children={comment.data.body}
                 />
-                <div className={styles.author}>
+                <div className={styles.commentsInfo}>
                   <img className={styles.icon} src={pen}></img>
                   <p>{comment.data.author} </p>
                   <img className={styles.icon} src={calendar}></img>
@@ -91,7 +97,11 @@ function Post(props) {
           </p>
           <ReactMarkdown className={styles.postText} children={post.selftext} />
           <img className={styles.postImg} src={post.thumbnail}></img>
-          <div className={styles.author}>
+          <div className={styles.info}>
+            <img className={styles.icon} src={thumbsUp}></img>
+            <p>{post.score}</p>
+            <img className={styles.icon} src={comments}></img>
+            <p>{post.num_comments}</p>
             <img className={styles.icon} src={pen}></img>
             <p>{post.author} </p>
             <img className={styles.icon} src={calendar}></img>
@@ -106,7 +116,7 @@ function Post(props) {
                   className={styles.commentText}
                   children={comment.data.body}
                 />
-                <div className={styles.author}>
+                <div className={styles.commentsInfo}>
                   <img className={styles.icon} src={pen}></img>
                   <p>{comment.data.author} </p>
                   <img className={styles.icon} src={calendar}></img>
@@ -137,7 +147,11 @@ function Post(props) {
           >
             Video not supported.
           </video>
-          <div className={styles.author}>
+          <div className={styles.info}>
+            <img className={styles.icon} src={thumbsUp}></img>
+            <p>{post.score}</p>
+            <img className={styles.icon} src={comments}></img>
+            <p>{post.num_comments}</p>
             <img className={styles.icon} src={pen}></img>
             <p>{post.author} </p>
             <img className={styles.icon} src={calendar}></img>
@@ -152,7 +166,7 @@ function Post(props) {
                   className={styles.commentText}
                   children={comment.data.body}
                 />
-                <div className={styles.author}>
+                <div className={styles.commentsInfo}>
                   <img className={styles.icon} src={pen}></img>
                   <p>{comment.data.author} </p>
                   <img className={styles.icon} src={calendar}></img>
@@ -175,7 +189,11 @@ function Post(props) {
             {post.subreddit_name_prefixed}
           </p>
           <ReactMarkdown className={styles.postText} children={post.selftext} />
-          <div className={styles.author}>
+          <div className={styles.info}>
+            <img className={styles.icon} src={thumbsUp}></img>
+            <p>{post.score}</p>
+            <img className={styles.icon} src={comments}></img>
+            <p>{post.num_comments}</p>
             <img className={styles.icon} src={pen}></img>
             <p>{post.author} </p>
             <img className={styles.icon} src={calendar}></img>
@@ -190,7 +208,7 @@ function Post(props) {
                   className={styles.commentText}
                   children={comment.data.body}
                 />
-                <div className={styles.author}>
+                <div className={styles.commentsInfo}>
                   <img className={styles.icon} src={pen}></img>
                   <p>{comment.data.author} </p>
                   <img className={styles.icon} src={calendar}></img>
