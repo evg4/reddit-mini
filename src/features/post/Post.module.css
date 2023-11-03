@@ -6,19 +6,6 @@
   font-size: larger;
 }
 
-.comment {
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  margin: 5px;
-  padding: 5px;
-}
-
-.ul {
-  list-style: none;
-  padding: 1px;
-  word-wrap: break-word;
-}
-
 .link {
   text-decoration: underline;
 }
@@ -28,16 +15,16 @@
   cursor: pointer;
 }
 
+.postText {
+  font-size: 20px;
+}
+
 .postImg,
 .postVid {
   max-width: 100%;
   max-height: 500px;
   display: block;
   margin: 5px auto;
-}
-
-.commentText {
-  font-size: 18px;
 }
 
 .author {
@@ -50,6 +37,19 @@
   margin: 5px;
 }
 
-.postText {
-  font-size: 20px;
+.ul {
+  list-style: none;
+  padding: 1px;
+  word-wrap: break-word;
+}
+
+.comment {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.commentText {
+  font-size: 18px;
 }

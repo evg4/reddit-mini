@@ -1,30 +1,3 @@
-input {
-  border: none;
-  border-radius: 5px;
-  padding: 5px;
-  margin: 5px;
-  height: 30px;
-  width: 300px;
-}
-
-button {
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  padding: 5px;
-  margin: 5px;
-  height: 40px;
-  color: brown;
-
-  font-weight: bold;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-}
-
-button:hover {
-  cursor: pointer;
-}
-
 form {
   background-color: white;
   width: max-content;
@@ -33,8 +6,29 @@ form {
   display: flex;
 }
 
+button {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  height: 40px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 .search {
   height: 30px;
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  height: 30px;
+  width: 300px;
 }
 
 .x {
