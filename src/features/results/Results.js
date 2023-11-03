@@ -28,6 +28,14 @@ function Results(props) {
           } else {
             video = "";
           }
+
+          let timestamp = item.data.created_utc * 1000;
+          let date = new Date(timestamp);
+          let day = date.getDate();
+          let month = date.getMonth() + 1;
+          let year = date.getFullYear();
+          let fullDate = `${day}-${month}-${year}`;
+
           return (
             <PostPreview
               key={item.data.id}
@@ -38,6 +46,10 @@ function Results(props) {
               permalink={item.data.permalink}
               selftext={item.data.selftext}
               video={video}
+              author={item.data.author}
+              ups={item.data.ups}
+              downs={item.data.downs}
+              date={fullDate}
               dispatch={props.dispatch}
               state={props.state}
             />

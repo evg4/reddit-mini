@@ -5,7 +5,6 @@ export const fetchResults = async (term) => {
     const data = await fetch(url);
     if (data.ok) {
       const jsonResponse = await data.json();
-      console.log("data fetched!");
       return jsonResponse;
       //code to execute with jsonResponse
     } else {
@@ -24,7 +23,6 @@ export const fetchSearchResults = async (term) => {
     const data = await fetch(url);
     if (data.ok) {
       const jsonResponse = await data.json();
-      console.log("data fetched!");
       return jsonResponse;
       //code to execute with jsonResponse
     } else {
