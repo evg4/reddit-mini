@@ -55,3 +55,15 @@
   display: flex;
   justify-content: space-between;
 }
+
+.icon {
+  height: 20px;
+  display: flex;
+  padding: 0 5px;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

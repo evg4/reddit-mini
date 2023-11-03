@@ -47,8 +47,8 @@ function Results(props) {
               selftext={item.data.selftext}
               video={video}
               author={item.data.author}
-              ups={item.data.ups}
-              downs={item.data.downs}
+              score={item.data.score}
+              comments={item.data.num_comments}
               date={fullDate}
               dispatch={props.dispatch}
               state={props.state}
