@@ -5,16 +5,14 @@ import { changeView } from "../features/feed/feedSlice";
 function Subreddit(props) {
   const dispatch = props.dispatch;
   const getResults = (e) => {
-    const term = e.target.innerHTML;
+    const term = e.target.getAttribute("name");
     dispatch(changeView("showResults"));
     dispatch(fetchResultsThunk(term));
   };
   return (
-    <div className={styles.container}>
-      <img src={props.img}></img>
-      <p onClick={getResults} className={styles.link} name={props.name}>
-        {props.name}
-      </p>
+    <div onClick={getResults} name={props.name} className={styles.container}>
+      <img name={props.name} src={props.img}></img>
+      <p name={props.name}>{props.name}</p>
     </div>
   );
 }
