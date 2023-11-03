@@ -35,3 +35,21 @@
   display: block;
   margin: 5px auto;
 }
+
+.commentText {
+  font-size: 18px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  height: 20px;
+  margin: 5px;
+}
+
+.postText {
+  font-size: 20px;
+}
