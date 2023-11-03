@@ -28,6 +28,7 @@
 .subreddit {
   text-decoration: underline;
   text-align: left;
+  width: max-content;
 }
 
 .subreddit:hover {

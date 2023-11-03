@@ -12,11 +12,12 @@ function PostPreview(props) {
   const dispatch = props.dispatch;
 
   const getPost = (e) => {
-    console.log("getting post!");
-    const rawTerm = e.target.getAttribute("value");
-    const term = rawTerm.slice(3, -1);
-    dispatch(changeView("showPost"));
-    dispatch(changeTerm(term));
+    if (e.target.getAttribute("value") !== "subreddit") {
+      const rawTerm = e.target.getAttribute("value");
+      const term = rawTerm.slice(3, -1);
+      dispatch(changeView("showPost"));
+      dispatch(changeTerm(term));
+    }
   };
 
   const goToSubreddit = (e) => {
@@ -29,7 +30,11 @@ function PostPreview(props) {
     return (
       <div value={props.permalink} onClick={getPost} className={styles.preview}>
         <h3 value={props.permalink}>{props.title}</h3>
-        <p className={styles.subreddit} onClick={goToSubreddit}>
+        <p
+          value="subreddit"
+          className={styles.subreddit}
+          onClick={goToSubreddit}
+        >
           r/{props.subreddit}
         </p>
         <img
@@ -76,7 +81,11 @@ function PostPreview(props) {
     return (
       <div value={props.permalink} onClick={getPost} className={styles.preview}>
         <h3 value={props.permalink}>{props.title}</h3>
-        <p className={styles.subreddit} onClick={goToSubreddit}>
+        <p
+          value="subreddit"
+          className={styles.subreddit}
+          onClick={goToSubreddit}
+        >
           r/{props.subreddit}
         </p>
         <img
@@ -122,7 +131,11 @@ function PostPreview(props) {
     return (
       <div value={props.permalink} onClick={getPost} className={styles.preview}>
         <h3 value={props.permalink}>{props.title}</h3>
-        <p className={styles.subreddit} onClick={goToSubreddit}>
+        <p
+          value="subreddit"
+          className={styles.subreddit}
+          onClick={goToSubreddit}
+        >
           r/{props.subreddit}
         </p>
 
@@ -172,7 +185,11 @@ function PostPreview(props) {
     return (
       <div value={props.permalink} onClick={getPost} className={styles.preview}>
         <h3 value={props.permalink}>{props.title}</h3>
-        <p className={styles.subreddit} onClick={goToSubreddit}>
+        <p
+          value="subreddit"
+          className={styles.subreddit}
+          onClick={goToSubreddit}
+        >
           r/{props.subreddit}
         </p>
 
