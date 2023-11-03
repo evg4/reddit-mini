@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { fetchPostThunk } from "./postSlice";
 import { fetchResultsThunk } from "../results/resultsSlice";
 import { changeView } from "../feed/feedSlice";
+import ReactMarkdown from "react-markdown";
 
 function Post(props) {
   const dispatch = props.dispatch;
@@ -13,7 +14,6 @@ function Post(props) {
 
   const goToSubreddit = (e) => {
     const term = e.target.innerHTML.slice(2);
-    console.log(term);
     dispatch(changeView("showResults"));
     dispatch(fetchResultsThunk(term));
   };
@@ -35,14 +35,14 @@ function Post(props) {
           <p className={styles.link} onClick={goToSubreddit}>
             {post.subreddit_name_prefixed}
           </p>
-          <p>{post.selftext}</p>
-          <img src={post.url}></img>
+          <ReactMarkdown children={post.selftext} />
+          <img className={styles.postImg} src={post.url}></img>
         </div>
         <ul className={styles.ul}>
           {commentsArr.map((comment) => {
             return (
               <li className={styles.comment} key={comment.data.id}>
-                {comment.data.body}
+                <ReactMarkdown children={comment.data.body} />
               </li>
             );
           })}
@@ -61,14 +61,14 @@ function Post(props) {
           <p className={styles.link} onClick={goToSubreddit}>
             {post.subreddit_name_prefixed}
           </p>
-          <p>{post.selftext}</p>
-          <img src={post.thumbnail}></img>
+          <ReactMarkdown children={post.selftext} />
+          <img className={styles.postImg} src={post.thumbnail}></img>
         </div>
         <ul className={styles.ul}>
           {commentsArr.map((comment) => {
             return (
               <li className={styles.comment} key={comment.data.id}>
-                {comment.data.body}
+                <ReactMarkdown children={comment.data.body} />
               </li>
             );
           })}
@@ -85,8 +85,12 @@ function Post(props) {
           <p className={styles.link} onClick={goToSubreddit}>
             {post.subreddit_name_prefixed}
           </p>
-          <p>{post.selftext}</p>
-          <video controls src={post.media.reddit_video.fallback_url}>
+          <ReactMarkdown children={post.selftext} />
+          <video
+            className={styles.postVid}
+            controls
+            src={post.media.reddit_video.fallback_url}
+          >
             Video not supported.
           </video>
         </div>
@@ -94,7 +98,7 @@ function Post(props) {
           {commentsArr.map((comment) => {
             return (
               <li className={styles.comment} key={comment.data.id}>
-                {comment.data.body}
+                <ReactMarkdown children={comment.data.body} />
               </li>
             );
           })}
@@ -111,13 +115,13 @@ function Post(props) {
           <p className={styles.link} onClick={goToSubreddit}>
             {post.subreddit_name_prefixed}
           </p>
-          <p>{post.selftext}</p>
+          <ReactMarkdown children={post.selftext} />
         </div>
         <ul className={styles.ul}>
           {commentsArr.map((comment) => {
             return (
               <li className={styles.comment} key={comment.data.id}>
-                {comment.data.body}
+                <ReactMarkdown children={comment.data.body} />
               </li>
             );
           })}
