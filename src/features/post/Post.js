@@ -34,7 +34,16 @@ function Post(props) {
   }
 
   if (props.state.post.isLoading) {
-    return <p>Loading...</p>;
+    return (
+      <div>
+        <p className={styles.loadingText}>Loading...</p>
+        <div className={styles.loading}>
+          <div className={styles.circle1}></div>
+          <div className={styles.circle2}></div>
+          <div className={styles.circle3}></div>
+        </div>
+      </div>
+    );
   } else if (props.state.post.hasError) {
     return <p>There was an error. Please try again.</p>;
   } else if (

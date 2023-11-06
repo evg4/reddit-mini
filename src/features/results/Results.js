@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { fetchResultsThunk } from "./resultsSlice";
 import PostPreview from "../../components/PostPreview";
+import styles from "./Results.module.css";
 
 function Results(props) {
   const dispatch = props.dispatch;
@@ -11,7 +12,16 @@ function Results(props) {
   }, []);
 
   if (props.state.results.isLoading === true) {
-    return <p>Loading...</p>;
+    return (
+      <div>
+        <p className={styles.loadingText}>Loading...</p>
+        <div className={styles.loading}>
+          <div className={styles.circle1}></div>
+          <div className={styles.circle2}></div>
+          <div className={styles.circle3}></div>
+        </div>
+      </div>
+    );
   } else if (props.state.results.hasError === true) {
     return <p>There was an error. Please try again.</p>;
   } else if (props.state.results.results === undefined) {
