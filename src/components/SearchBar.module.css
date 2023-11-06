@@ -1,6 +1,6 @@
 form {
   background-color: white;
-  width: max-content;
+  max-width: 270px;
   border-radius: 5px;
   margin: 0 auto;
   display: flex;
@@ -28,7 +28,6 @@ input {
   padding: 5px;
   margin: 5px;
   height: 30px;
-  width: 300px;
 }
 
 .x {
@@ -47,5 +46,19 @@ input {
 @media only screen and (max-width: 500px) {
   input {
     width: 90%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .search {
+    height: 20px;
+  }
+
+  input {
+    height: 20px;
+  }
+
+  button {
+    height: 30px;
   }
 }

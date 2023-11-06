@@ -2,8 +2,7 @@ header {
   background-color: brown;
   padding: 20px;
   text-align: center;
-  height: 200px;
-  width: 100%;
+  /*do not do width 100% this makes a horizontal scroll bar appear */
 }
 
 main {

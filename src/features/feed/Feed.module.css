@@ -2,5 +2,6 @@
   border-radius: 5px;
   color: brown;
   max-width: 1000px;
+  min-width: 200px;
   margin: 10px auto;
 }

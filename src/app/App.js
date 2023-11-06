@@ -29,7 +29,7 @@ function App({ state, dispatch }) {
   };
 
   return (
-    <div>
+    <div className={styles.page}>
       <header>
         <Header onClick={goHome} />
         <SearchBar state={state} dispatch={dispatch} />
