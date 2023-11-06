@@ -6,7 +6,6 @@ import { fetchResults } from "../data/redditApi";
 function Subreddits(props) {
   return (
     <section className={styles.section}>
-      <h2>Subreddits</h2>
       {subreddits.map((item) => {
         return (
           <Subreddit

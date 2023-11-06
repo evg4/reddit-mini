@@ -32,15 +32,21 @@ function SearchBar(props) {
   };
 
   return (
-    <form onSubmit={handleSubmit} onChange={handleChange}>
-      <button>
-        <img className={styles.search} src={searchIcon}></img>
-      </button>
-      <input id="value" placeholder="Enter search term"></input>
-      <sup onClick={handleDelete} className={styles.x}>
-        x
-      </sup>
-    </form>
+    <div className={styles.containerDiv}>
+      <form
+        className={styles.fix}
+        onSubmit={handleSubmit}
+        onChange={handleChange}
+      >
+        <button>
+          <img className={styles.search} src={searchIcon}></img>
+        </button>
+        <input id="value" placeholder="Enter search term"></input>
+        <sup onClick={handleDelete} className={styles.x}>
+          x
+        </sup>
+      </form>
+    </div>
   );
 }
 

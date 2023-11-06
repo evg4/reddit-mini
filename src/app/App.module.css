@@ -2,15 +2,13 @@ header {
   background-color: brown;
   padding: 20px;
   text-align: center;
+  height: 200px;
+  width: 100%;
 }
 
 main {
   display: flex;
   justify-content: left;
-}
-
-h2 {
-  text-align: center;
 }
 
 footer {

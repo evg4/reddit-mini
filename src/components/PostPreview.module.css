@@ -9,7 +9,6 @@
 
 .preview:hover {
   background-color: lightgray;
-
   cursor: pointer;
 }
 
@@ -46,4 +45,25 @@
   height: 20px;
   display: flex;
   padding: 0 5px;
+}
+
+@media only screen and (max-width: 1000px) {
+  h3 {
+    font-size: 18px;
+  }
+  .imgUrl {
+    width: 300px;
+  }
+
+  .imgTh {
+    width: 200px;
+  }
+
+  .vid {
+    width: 300px;
+  }
+
+  .preview p {
+    font-size: smaller;
+  }
 }

@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import SearchBar from "../components/SearchBar";
 import Subreddits from "../components/Subreddits";
 import Feed from "../features/feed/Feed";
+import TopButton from "../components/TopButton";
 import Footer from "../components/Footer";
 import React from "react";
 import { changeView } from "../features/feed/feedSlice";
@@ -40,6 +41,7 @@ function App({ state, dispatch }) {
           changeResults={changeResults}
         />
         <Feed state={state} dispatch={dispatch} changeFeed={changeFeed} />
+        <TopButton />
       </main>
       <footer>
         <Footer />
