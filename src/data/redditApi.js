@@ -15,7 +15,7 @@ export const fetchResults = async (term) => {
 };
 
 export const fetchSearchResults = async (term) => {
-  let newTerm = term.replace(" ", "%20");
+  //let newTerm = term.replace(" ", "%20");
   const base = "https://www.reddit.com/search.json?q=";
   const url = base + term;
   try {

@@ -3,7 +3,6 @@ import { fetchResultsThunk } from "../features/results/resultsSlice";
 import { changeView } from "../features/feed/feedSlice";
 import { changeTerm } from "../features/searchTerm/searchTermSlice";
 import upsImg from "../assets/ups.png";
-import downsImg from "../assets/downs.png";
 import comments from "../assets/comments.png";
 import pen from "../assets/pen.png";
 import calendar from "../assets/calendar.png";
@@ -38,30 +37,35 @@ function PostPreview(props) {
           r/{props.subreddit}
         </p>
         <img
+          alt={props.title}
           value={props.permalink}
           className={styles.imgUrl}
           src={props.url}
         ></img>
         <div value={props.permalink} className={styles.info}>
           <img
+            alt="thumbs up"
             value={props.permalink}
             className={styles.icon}
             src={upsImg}
           ></img>
           <p value={props.permalink}>{props.score}</p>
           <img
+            alt="comment bubble"
             value={props.permalink}
             className={styles.icon}
             src={comments}
           ></img>
           <p value={props.permalink}>{props.comments}</p>
           <img
+            alt="pen"
             value={props.permalink}
             className={styles.icon}
             src={pen}
           ></img>{" "}
           <p value={props.permalink}>{props.author}</p>
           <img
+            alt="calendar"
             value={props.permalink}
             className={styles.icon}
             src={calendar}
@@ -84,30 +88,35 @@ function PostPreview(props) {
           r/{props.subreddit}
         </p>
         <img
+          alt={props.title}
           value={props.permalink}
           className={styles.imgTh}
           src={props.thumbnail}
         ></img>
         <div value={props.permalink} className={styles.info}>
           <img
+            alt="thumbs up"
             value={props.permalink}
             className={styles.icon}
             src={upsImg}
           ></img>
           <p value={props.permalink}>{props.score}</p>
           <img
+            alt="comments bubble"
             value={props.permalink}
             className={styles.icon}
             src={comments}
           ></img>
           <p value={props.permalink}>{props.comments}</p>
           <img
+            alt="pen"
             value={props.permalink}
             className={styles.icon}
             src={pen}
           ></img>{" "}
           <p value={props.permalink}>{props.author}</p>
           <img
+            alt="calendar"
             value={props.permalink}
             className={styles.icon}
             src={calendar}
@@ -139,24 +148,28 @@ function PostPreview(props) {
         </video>
         <div value={props.permalink} className={styles.info}>
           <img
+            alt="thumbs up"
             value={props.permalink}
             className={styles.icon}
             src={upsImg}
           ></img>
           <p value={props.permalink}>{props.score}</p>
           <img
+            alt="comments bubble"
             value={props.permalink}
             className={styles.icon}
             src={comments}
           ></img>
           <p value={props.permalink}>{props.comments}</p>
           <img
+            alt="pen"
             value={props.permalink}
             className={styles.icon}
             src={pen}
           ></img>{" "}
           <p value={props.permalink}>{props.author}</p>
           <img
+            alt="calendar"
             value={props.permalink}
             className={styles.icon}
             src={calendar}
@@ -180,24 +193,28 @@ function PostPreview(props) {
 
         <div value={props.permalink} className={styles.info}>
           <img
+            alt="thumbs up"
             value={props.permalink}
             className={styles.icon}
             src={upsImg}
           ></img>
           <p value={props.permalink}>{props.score}</p>
           <img
+            alt="comments bubble"
             value={props.permalink}
             className={styles.icon}
             src={comments}
           ></img>
           <p value={props.permalink}>{props.comments}</p>
           <img
+            alt="pen"
             value={props.permalink}
             className={styles.icon}
             src={pen}
           ></img>{" "}
           <p value={props.permalink}>{props.author}</p>
           <img
+            alt="calendar"
             value={props.permalink}
             className={styles.icon}
             src={calendar}

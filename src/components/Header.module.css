@@ -13,7 +13,7 @@ h1:hover {
   cursor: pointer;
 }
 
-span {
+.span {
   font-style: italic;
   color: rgba(211, 211, 211, 0.781);
 }

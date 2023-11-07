@@ -3,7 +3,7 @@ import styles from "./Header.module.css";
 function Header(props) {
   return (
     <h1 onClick={props.onClick}>
-      Reddit<span>mini</span>
+      Reddit<span className={styles.span}>mini</span>
     </h1>
   );
 }

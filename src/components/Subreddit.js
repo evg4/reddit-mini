@@ -11,7 +11,7 @@ function Subreddit(props) {
   };
   return (
     <div onClick={getResults} name={props.name} className={styles.container}>
-      <img name={props.name} src={props.img}></img>
+      <img alt={props.name} name={props.name} src={props.img}></img>
       <p name={props.name}>{props.name}</p>
     </div>
   );

@@ -60,15 +60,19 @@ function Post(props) {
             {post.subreddit_name_prefixed}
           </p>
           <ReactMarkdown className={styles.postText} children={post.selftext} />
-          <img className={styles.postImg} src={post.url}></img>
+          <img alt={post.title} className={styles.postImg} src={post.url}></img>
           <div className={styles.info}>
-            <img className={styles.icon} src={thumbsUp}></img>
+            <img alt="thumbs up" className={styles.icon} src={thumbsUp}></img>
             <p>{post.score}</p>
-            <img className={styles.icon} src={comments}></img>
+            <img
+              alt="comments bubble"
+              className={styles.icon}
+              src={comments}
+            ></img>
             <p>{post.num_comments}</p>
-            <img className={styles.icon} src={pen}></img>
+            <img alt="pen" className={styles.icon} src={pen}></img>
             <p>{post.author} </p>
-            <img className={styles.icon} src={calendar}></img>
+            <img alt="calendar" className={styles.icon} src={calendar}></img>
             <p> {fullDate}</p>
           </div>
         </div>
@@ -81,9 +85,13 @@ function Post(props) {
                   children={comment.data.body}
                 />
                 <div className={styles.commentsInfo}>
-                  <img className={styles.icon} src={pen}></img>
+                  <img alt="pen" className={styles.icon} src={pen}></img>
                   <p>{comment.data.author} </p>
-                  <img className={styles.icon} src={calendar}></img>
+                  <img
+                    alt="calendar"
+                    className={styles.icon}
+                    src={calendar}
+                  ></img>
                   <p> {fullDate}</p>
                 </div>
               </li>
@@ -105,15 +113,23 @@ function Post(props) {
             {post.subreddit_name_prefixed}
           </p>
           <ReactMarkdown className={styles.postText} children={post.selftext} />
-          <img className={styles.postImg} src={post.thumbnail}></img>
+          <img
+            alt={post.title}
+            className={styles.postImg}
+            src={post.thumbnail}
+          ></img>
           <div className={styles.info}>
-            <img className={styles.icon} src={thumbsUp}></img>
+            <img alt="thumbs up" className={styles.icon} src={thumbsUp}></img>
             <p>{post.score}</p>
-            <img className={styles.icon} src={comments}></img>
+            <img
+              alt="comments bubble"
+              className={styles.icon}
+              src={comments}
+            ></img>
             <p>{post.num_comments}</p>
-            <img className={styles.icon} src={pen}></img>
+            <img alt="pen" className={styles.icon} src={pen}></img>
             <p>{post.author} </p>
-            <img className={styles.icon} src={calendar}></img>
+            <img alt="calendar" className={styles.icon} src={calendar}></img>
             <p> {fullDate}</p>
           </div>
         </div>
@@ -126,9 +142,13 @@ function Post(props) {
                   children={comment.data.body}
                 />
                 <div className={styles.commentsInfo}>
-                  <img className={styles.icon} src={pen}></img>
+                  <img alt="pen" className={styles.icon} src={pen}></img>
                   <p>{comment.data.author} </p>
-                  <img className={styles.icon} src={calendar}></img>
+                  <img
+                    alt="calendar"
+                    className={styles.icon}
+                    src={calendar}
+                  ></img>
                   <p> {fullDate}</p>
                 </div>
               </li>
@@ -157,13 +177,17 @@ function Post(props) {
             Video not supported.
           </video>
           <div className={styles.info}>
-            <img className={styles.icon} src={thumbsUp}></img>
+            <img alt="thumbs up" className={styles.icon} src={thumbsUp}></img>
             <p>{post.score}</p>
-            <img className={styles.icon} src={comments}></img>
+            <img
+              alt="comments bubble"
+              className={styles.icon}
+              src={comments}
+            ></img>
             <p>{post.num_comments}</p>
-            <img className={styles.icon} src={pen}></img>
+            <img alt="pen" className={styles.icon} src={pen}></img>
             <p>{post.author} </p>
-            <img className={styles.icon} src={calendar}></img>
+            <img alt="calendar" className={styles.icon} src={calendar}></img>
             <p> {fullDate}</p>
           </div>
         </div>
@@ -176,9 +200,13 @@ function Post(props) {
                   children={comment.data.body}
                 />
                 <div className={styles.commentsInfo}>
-                  <img className={styles.icon} src={pen}></img>
+                  <img alt="pen" className={styles.icon} src={pen}></img>
                   <p>{comment.data.author} </p>
-                  <img className={styles.icon} src={calendar}></img>
+                  <img
+                    alt="calendar"
+                    className={styles.icon}
+                    src={calendar}
+                  ></img>
                   <p> {fullDate}</p>
                 </div>
               </li>
@@ -199,13 +227,17 @@ function Post(props) {
           </p>
           <ReactMarkdown className={styles.postText} children={post.selftext} />
           <div className={styles.info}>
-            <img className={styles.icon} src={thumbsUp}></img>
+            <img alt="thumbs up" className={styles.icon} src={thumbsUp}></img>
             <p>{post.score}</p>
-            <img className={styles.icon} src={comments}></img>
+            <img
+              alt="comments bubble"
+              className={styles.icon}
+              src={comments}
+            ></img>
             <p>{post.num_comments}</p>
-            <img className={styles.icon} src={pen}></img>
+            <img alt="pen" className={styles.icon} src={pen}></img>
             <p>{post.author} </p>
-            <img className={styles.icon} src={calendar}></img>
+            <img alt="calendar" className={styles.icon} src={calendar}></img>
             <p> {fullDate}</p>
           </div>
         </div>
@@ -218,9 +250,13 @@ function Post(props) {
                   children={comment.data.body}
                 />
                 <div className={styles.commentsInfo}>
-                  <img className={styles.icon} src={pen}></img>
+                  <img alt="pen" className={styles.icon} src={pen}></img>
                   <p>{comment.data.author} </p>
-                  <img className={styles.icon} src={calendar}></img>
+                  <img
+                    alt="calendar"
+                    className={styles.icon}
+                    src={calendar}
+                  ></img>
                   <p> {fullDate}</p>
                 </div>
               </li>

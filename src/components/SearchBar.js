@@ -39,7 +39,11 @@ function SearchBar(props) {
         onChange={handleChange}
       >
         <button>
-          <img className={styles.search} src={searchIcon}></img>
+          <img
+            alt="magnifying glass"
+            className={styles.search}
+            src={searchIcon}
+          ></img>
         </button>
         <input id="value" placeholder="Enter search term"></input>
         <sup onClick={handleDelete} className={styles.x}>
