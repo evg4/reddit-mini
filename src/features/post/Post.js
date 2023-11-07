@@ -14,6 +14,7 @@ function Post(props) {
   const term = props.state.searchTerm;
   useEffect(() => {
     dispatch(fetchPostThunk(term));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const goToSubreddit = (e) => {

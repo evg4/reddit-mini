@@ -9,6 +9,7 @@ function Results(props) {
     if (props.state.results.results.kind === undefined) {
       dispatch(fetchResultsThunk("popular"));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (props.state.results.isLoading === true) {
