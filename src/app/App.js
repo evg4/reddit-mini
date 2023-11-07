@@ -16,7 +16,6 @@ function App({ state, dispatch }) {
     } else {
       dispatch(changeView("showResults"));
     }
-    //console.log(state.feed);
   };
 
   const changeResults = (e) => {

@@ -28,14 +28,5 @@ const options = {
 };
 
 const postSlice = createSlice(options);
-//export const { changePost } = postSlice.actions;
 export { fetchPostThunk };
 export default postSlice.reducer;
-
-/* 
-changePost: (state, action) => {
-      //check this!! just copied from feedSlice so far
-      state = action.payload;
-      return state;
-    },
-*/

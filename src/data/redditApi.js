@@ -6,7 +6,6 @@ export const fetchResults = async (term) => {
     if (data.ok) {
       const jsonResponse = await data.json();
       return jsonResponse;
-      //code to execute with jsonResponse
     } else {
       throw new Error("Request failed.");
     }
@@ -24,7 +23,6 @@ export const fetchSearchResults = async (term) => {
     if (data.ok) {
       const jsonResponse = await data.json();
       return jsonResponse;
-      //code to execute with jsonResponse
     } else {
       throw new Error("Request failed.");
     }
