@@ -4,4 +4,12 @@
   width: max-content;
   height: max-content;
   margin: 10px;
+  position: sticky;
+  top: 3px;
+}
+
+@media only screen and (max-height: 730px) {
+  .section {
+    position: relative;
+  }
 }
